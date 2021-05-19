@@ -19,29 +19,29 @@ export function getUserData() {
 }
 
 export function setToken(value) {
-	localStorage.setItem(USER_TOKEN, value);
+	sessionStorage.setItem(USER_TOKEN, value);
 }
 
 export function getToken() {
-	return localStorage.getItem(USER_TOKEN);
+	return sessionStorage.getItem(USER_TOKEN);
 }
 
 export function setName(value) {
-	localStorage.setItem(USER_NAME, value);
+	sessionStorage.setItem(USER_NAME, value);
 }
 
 export function getName() {
-	return localStorage.getItem(USER_NAME);
+	return sessionStorage.getItem(USER_NAME);
 }
 
 export function setPic(value) {
-	localStorage.setItem(USER_PIC, value);
+	sessionStorage.setItem(USER_PIC, value);
 }
 
 export function getPic() {
-	return localStorage.getItem(USER_PIC);
+	return sessionStorage.getItem(USER_PIC);
 }
 
 export function clearStorage() {
-	localStorage.clear();
+	sessionStorage.clear();
 }
