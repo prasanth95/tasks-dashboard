@@ -27,8 +27,10 @@ function AddOrEditTask(props) {
 
 	const onClickAddOrEditTask = () => {
 		const { onClickAddOrEditTask } = props;
-		if (task.length > 2) {
-			onClickAddOrEditTask({ id: props.taskId, name: task });
+		const trimmedTask = task.trim()
+		setTask(trimmedTask)
+		if (trimmedTask.length > 2) {
+			onClickAddOrEditTask({ id: props.taskId, name: trimmedTask });
 		} else {
 			setIsValidTaskName(false);
 		}

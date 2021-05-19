@@ -25,13 +25,17 @@ function LoginForm(props) {
 	};
 
 	const areFormFieldsValid = () => {
-		return id.length > 2 && name.length > 2
+		const trimmedId = id.trim()
+		const trimmedName = name.trim()
+		setId(trimmedId)
+		setName(trimmedName)
+		return trimmedId.length > 2 && trimmedName.length > 2
 	}
 
 	const onClickLogin = () => {
 		if (areFormFieldsValid()) {
 			const requestObject = {
-				name: name,
+				name: name.trim(),
 				apiKey: process.env.REACT_APP_API_KEY,
 			};
 	
