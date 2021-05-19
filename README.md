@@ -11,23 +11,24 @@ These instructions should get you a copy of the project up and running on your l
 
 ## Installing
 To get the project running, follow these steps:
-  * Create a folder and Navigate to that folder
-  ```
-  cd <folder-name>
-  ```
   * Clone this repository
   ```
   git clone https://github.com/prasanth95/tasks-dashboard.git
+  ```
+  * Navigate to project path
+  ```
+  cd tasks-dashboard/
   ```
   * Install the dependencies
   ```
   npm i
   ```
-  * Create a file called .env to store environment variables. Follow the below format and set api key and base url
-```
-REACT_APP_API_KEY="your api key"
-REACT_APP_BASE_URL="your base url"
-```
+  * Open `.env` file and set api key and base url replacing XXXX. For ex:
+  ```
+  REACT_APP_API_KEY=MY_API_KEY
+  REACT_APP_BASE_URL=MY_BASE_URL
+  ```
+  
 * If all the above steps done, run the project
 ```
 npm start
