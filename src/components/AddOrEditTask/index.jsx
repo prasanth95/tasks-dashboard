@@ -57,6 +57,7 @@ function AddOrEditTask(props) {
 				value={task}
 				onChange={onChangeTask}
 				onKeyDown={onKeyDown}
+				autoFocus
 			/>
 			<Button onClick={onClickAddOrEditTask}>
 				<ButtonText>{props.taskId ? "Edit Task" : "+ New Task"}</ButtonText>

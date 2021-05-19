@@ -34,9 +34,7 @@ function Tasks(props) {
 			if (task.name.toLowerCase().includes(searchInputInLowerCase)) {
 				return (
 					<TaskContainer key={task._id}>
-						<TaskNameContainer
-							onClick={() => onClickCompleted(task._id, !task.completed)}
-						>
+						<TaskNameContainer>
 							<Checkbox
 								type='checkbox'
 								checked={task.completed}
@@ -44,7 +42,12 @@ function Tasks(props) {
 									onClickCompleted(task._id, !task.completed)
 								}
 							/>
-							<TaskName isCompleted={task.completed}>
+							<TaskName
+								onClick={() =>
+									onClickCompleted(task._id, !task.completed)
+								}
+								isCompleted={task.completed}
+							>
 								{task.name}
 							</TaskName>
 						</TaskNameContainer>

@@ -39,7 +39,6 @@ export const TaskContainer = styled.div`
 export const TaskNameContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	cursor: pointer;
 `;
 
 export const Checkbox = styled.input`
@@ -48,6 +47,7 @@ export const Checkbox = styled.input`
 	width: 19px;
 	min-width: 19px;
 	height: 19px;
+	cursor: pointer;
 `;
 
 export const TaskName = styled(BaseText)`
@@ -58,6 +58,7 @@ export const TaskName = styled(BaseText)`
 	padding-right: 24px;
 	color: ${(props) => (props.isCompleted ? "#537178" : "#5285ec")};
 	text-decoration: ${(props) => props.isCompleted && "line-through"};
+	cursor: pointer;
 `;
 
 export const Icons = styled.div`
