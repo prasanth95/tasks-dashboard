@@ -1,4 +1,6 @@
 import React, { useReducer, useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import DashboardPage from "./containers/DashboardPage";
 import LoginPage from "./containers/LoginPage";
@@ -63,6 +65,17 @@ function App() {
 		<UserContext.Provider value={{ state, dispatch }}>
 			<div className='App'>
 				{state.isUserLoggedIn ? <DashboardPage /> : <LoginPage />}
+				<ToastContainer
+					position='bottom-center'
+					autoClose={2000}
+					hideProgressBar={true}
+					newestOnTop={true}
+					closeOnClick
+					rtl={false}
+					closeButton={false}
+					draggable
+					pauseOnHover
+				/>
 			</div>
 		</UserContext.Provider>
 	);

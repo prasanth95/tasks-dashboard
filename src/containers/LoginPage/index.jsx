@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast } from 'react-toastify';
 
 import LoginForm from "../../components/LoginForm";
 import UserContext from "../../UserContext";
@@ -20,7 +21,7 @@ function LoginPage() {
 				}
 			})
 			.catch(function (error) {
-				console.log(error);
+				toast(error.statusText);
 			});
 	};
 

@@ -28,6 +28,11 @@ export function networkCall(url, type, request) {
 			break;
 	}
 	return fetch(endpoint, options)
-		.then((response) => response.json())
+		.then((response) => {
+			if (response.ok) {
+				return response.json();
+			}
+			throw response;
+		})
 		.then((json) => json);
 }

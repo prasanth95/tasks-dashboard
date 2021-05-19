@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { toast } from 'react-toastify';
 
 import Header from "../../components/Header";
 import AddOrEditTask from "../../components/AddOrEditTask";
@@ -77,7 +78,7 @@ function DashboardPage() {
 				setDashboardDetails(response);
 			})
 			.catch(function (error) {
-				console.log(error);
+				toast(error.statusText);
 			});
 	};
 
@@ -87,7 +88,7 @@ function DashboardPage() {
 				setTasks(response.tasks);
 			})
 			.catch(function (error) {
-				console.log(error);
+				toast(error.statusText);
 			});
 	};
 
@@ -110,7 +111,7 @@ function DashboardPage() {
 				fetchData();
 			})
 			.catch(function (error) {
-				console.log(error);
+				toast(error.statusText);
 			});
 	};
 
@@ -125,7 +126,7 @@ function DashboardPage() {
 				fetchData();
 			})
 			.catch(function (error) {
-				console.log(error);
+				toast(error.statusText);
 			});
 	};
 
@@ -195,7 +196,7 @@ function DashboardPage() {
 				fetchData();
 			})
 			.catch(function (error) {
-				console.log(error);
+				toast(error.statusText);
 			});
 	};
 
